@@ -59,7 +59,7 @@ const AskPass = ({ Id, setNoteContent }) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handlePassSubmit}>
+        <Button variant="primary" onClick={handlePassSubmit} onTouchStart={handlePassSubmit}>
           Submiddt
         </Button>
       </Modal.Footer>

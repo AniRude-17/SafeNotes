@@ -42,8 +42,7 @@ const MakeNote = ({Id,setNoteContent}) => {
     <div>MakeNote
         <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Note Does Not Exists
-            To create on this name enter the password
+        <Modal.Title>Create Note
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

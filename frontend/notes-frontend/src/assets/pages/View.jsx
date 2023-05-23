@@ -8,7 +8,6 @@ import Button from 'react-bootstrap/Button';
 
 const View = () => {
   const id=useParams().id;
-  console.log(id);
 
   const [noteContent, setNoteContent] = useState(id);
   const [noteExists, setNoteExists] = useState(false);
@@ -39,7 +38,6 @@ const View = () => {
       const response = await axios.get(`http://localhost:8000/view-existence?id=${id}`);
       if (response.data === 'YES') {
         setNoteExists(true);
-        console.log('Note exists');
       } else {
         setNoteExists(false);
         console.log('Note does not exist');
@@ -60,11 +58,11 @@ const View = () => {
   return (
     <div>
       <h3>VIEW NOTE</h3>
-      {/* <AskPass Id={id} setNoteContent={setNoteContent} /> */}
-      {/* <MakeNote Id={id} setNoteContent={setNoteContent}/> */}
       {noteExists ? <AskPass Id={id} setNoteContent={setNoteContent} /> : <MakeNote Id={id} setNoteContent={setNoteContent}/>}
-      <textarea value={noteContent} id="noteText" onChange={handleNoteEdit} />
-      <Button onClick={updateNote}> Update Note </Button>
+      <div id="noteArea">
+        <textarea value={noteContent} id="noteText" onChange={handleNoteEdit} />
+        <Button onClick={updateNote} id="updateNoteButton"> Update Note </Button>
+      </div>
     </div>
   );
 };
