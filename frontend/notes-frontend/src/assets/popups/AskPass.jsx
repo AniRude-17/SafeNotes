@@ -40,8 +40,8 @@ const AskPass = ({ Id, setNoteContent }) => {
   
   return (
     <>
-    <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
+    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+      <Modal.Header>
         <Modal.Title>Note Exists Enter Passowrd</Modal.Title>
       </Modal.Header>
       <Modal.Body>
