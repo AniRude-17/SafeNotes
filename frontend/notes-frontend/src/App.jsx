@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      NOTES
+      <div id="top">Safe Notes</div>
       <BrowserRouter>
       <Routes>
         <Route path='/:id' element={<View />} />

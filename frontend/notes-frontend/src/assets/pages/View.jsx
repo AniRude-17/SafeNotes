@@ -57,7 +57,7 @@ const View = () => {
 
   return (
     <div>
-      <h3>VIEW NOTE</h3>
+      <h6>Viewing Note {id}</h6>
       {noteExists ? <AskPass Id={id} setNoteContent={setNoteContent} /> : <MakeNote Id={id} setNoteContent={setNoteContent}/>}
       <div id="noteArea">
         <textarea value={noteContent} id="noteText" onChange={handleNoteEdit} />

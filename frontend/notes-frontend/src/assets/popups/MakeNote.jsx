@@ -40,8 +40,8 @@ const MakeNote = ({Id,setNoteContent}) => {
 
   return (
     <div>MakeNote
-        <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+      <Modal.Header>
         <Modal.Title>Create Note
         </Modal.Title>
       </Modal.Header>
@@ -54,6 +54,7 @@ const MakeNote = ({Id,setNoteContent}) => {
               placeholder="pupu Password"
                value={password}
                onChange={handleChange}
+               type="password"
               autoFocus
             />
           </Form.Group>

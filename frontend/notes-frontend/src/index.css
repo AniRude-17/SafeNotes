@@ -4,7 +4,7 @@
   font-weight: 400;
 }
 body{
-  background-color: rgb(212, 174, 131);
+  background-color: #93a0b4;
 }
 
 a {
@@ -24,17 +24,22 @@ h1 {
 #noteText{
   width: 20rem;
   height: 20rem;
-  background-color: #af9579;
+  background-color: #ac9c9c;
   text-align: center;
-  border-width: 2px;
+  border-width: 1px;
+  outline:none;
 }
 
+#noteText:focus{
+  border-color: rgb(56, 56, 59);
+}
 
 #noteArea{
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0;
   padding: 1%;
 }
 
