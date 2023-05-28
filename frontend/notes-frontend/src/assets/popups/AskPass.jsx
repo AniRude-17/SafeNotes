@@ -58,7 +58,7 @@ const AskPass = ({ Id, setNoteContent }) => {
           {errorMessage && <p className="text-danger">{errorMessage}</p>}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handlePassSubmit} onTouchStart={handlePassSubmit}>
+          <Button variant="primary" onClick={handlePassSubmit} onTouchStart={handlePassSubmit} className='react-button'>
             Submit
           </Button>
         </Modal.Footer>

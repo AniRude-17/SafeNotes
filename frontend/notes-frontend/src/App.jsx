@@ -6,7 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <div id="top">Safe Notes</div>
+      <div id="Navbar">
+        <div id="App">
+          Safe Notes
+        </div>
+      </div>
       <BrowserRouter>
       <Routes>
         <Route path='/:id' element={<View />} />

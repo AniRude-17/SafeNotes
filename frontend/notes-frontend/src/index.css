@@ -1,52 +1,84 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-}
-body{
-  background-color: #93a0b4;
+body {
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#Navbar {
+  padding: 0.25%;
+  background-color: #646cff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#noteText{
-  width: 20rem;
-  height: 20rem;
-  background-color: #ac9c9c;
-  text-align: center;
-  border-width: 1px;
-  outline:none;
+#App {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-#noteText:focus{
-  border-color: rgb(56, 56, 59);
+#view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-#noteArea{
+#noteArea {
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 0;
-  padding: 1%;
+  width: 100%;
+  overflow-y: auto;
 }
 
-#updateNoteButton{
-  margin-top: 1%;
+#noteText {
+  width: 100%;
+  height: 80vh;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  border-width: 1px;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  overflow-y: auto;
 }
 
-Button{
+
+.react-button{
+  background-color: rgb(187, 176, 228);
+  margin: 0.5%;
+  color: rgb(31, 28, 28);
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.react-button:hover{
+  transition-delay: 10ms;
+  background-color:rgb(21, 19, 22);
+  color: #f9f9f9;
+}
+
+
+
+#topArea {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#noteName {
+  font-weight: bold;
+  margin-right: 10px;
 }

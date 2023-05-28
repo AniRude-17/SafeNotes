@@ -39,7 +39,7 @@ const MakeNote = ({Id,setNoteContent}) => {
     }
 
   return (
-    <div>MakeNote
+    <div>
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
       <Modal.Header>
         <Modal.Title>Create Note
@@ -61,7 +61,7 @@ const MakeNote = ({Id,setNoteContent}) => {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="primary" onClick={handlePass}>
+        <Button variant="primary" onClick={handlePass} className='react-button'>
           Submit
         </Button>
       </Modal.Footer>
