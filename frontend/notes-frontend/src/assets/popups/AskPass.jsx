@@ -38,7 +38,7 @@ const AskPass = ({ Id, setNoteContent }) => {
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} animation={false}>
         <Modal.Header>
           <Modal.Title>Note Protected</Modal.Title>
         </Modal.Header>

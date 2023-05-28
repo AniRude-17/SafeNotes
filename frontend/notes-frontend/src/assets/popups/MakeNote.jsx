@@ -40,7 +40,7 @@ const MakeNote = ({Id,setNoteContent}) => {
 
   return (
     <div>
-        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
+        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} animation={false}>
       <Modal.Header>
         <Modal.Title>Create Note
         </Modal.Title>
