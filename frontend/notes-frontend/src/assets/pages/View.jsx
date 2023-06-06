@@ -5,7 +5,6 @@ import MakeNote from '../popups/MakeNote';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button';
-import ReactQuill from 'react-quill';
 
 const View = () => {
   const id=useParams().id;
@@ -29,7 +28,6 @@ const View = () => {
           })
           .catch(error => {
             console.error(error);
-            // Handle the error as needed
           });
     console.log("lol");
   }
@@ -60,7 +58,7 @@ const View = () => {
     <div id="view">
       <div id="topArea">
         <div id="noteName">Note {id}</div>
-        <Button onClick={updateNote} id="updateNoteButton" className='react-button'> Save</Button>
+        <input type="button" onClick={updateNote} id="updateNoteButton" className='react-button' value='SAVE'></input>
       </div>
       {noteExists ? <AskPass Id={id} setNoteContent={setNoteContent} /> : <MakeNote Id={id} setNoteContent={setNoteContent}/>}
       <div id="noteArea">
