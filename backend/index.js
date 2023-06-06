@@ -1,3 +1,5 @@
+const {MD5} = require('crypto-js') 
+
 const express = require('express')
 const mysql = require('mysql')
 const cors=require('cors')
@@ -25,10 +27,11 @@ app.get('/', (req,res)=>{
 
 app.post('/add', (req,res) => {
     const q="INSERT INTO `notes`.`note` (`id`, `passhash`, `content`) VALUES (?);"
-
+    const pw=req.body.passhash;
+    const hashpw=MD5(pw).toString();
     const values=[
         req.body.id,
-        req.body.passhash,
+        hashpw,
         req.body.content,
     ];
     db.query(q, [values], (err,data)=> {
@@ -52,7 +55,8 @@ app.get('/view-existence', (req,res) =>{
 app.get('/view-full', (req,res)=>{
     const q= "SELECT content from notes.note WHERE id = ? AND passhash = ? ;"
     const note_id=req.query.id;
-    const passhash=req.query.password;
+    const pw=req.query.password;
+    const passhash=MD5(pw).toString();
 
     db.query(q,[note_id, passhash] , (err,data) =>{
         if(err) return res.send(err)
