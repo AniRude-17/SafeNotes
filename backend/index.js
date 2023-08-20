@@ -21,7 +21,10 @@ app.get('/', (req, res) => {
   const q = "SELECT * FROM notes.note;";
   db.query(q, (err, data) => {
     if (err) res.send(err);
-    res.json(data);
+    else{
+      const all=JSON.stringify(data,'',5);
+      res.type('application/json').send(all);
+    }
   });
 });
 

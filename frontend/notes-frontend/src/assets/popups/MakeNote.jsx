@@ -29,12 +29,10 @@ const MakeNote = ({Id,setNoteContent}) => {
           .then(response => {
             setShow(false);
             setNoteContent("The Note is Currently Empty :(");
-            // Handle the response as needed
           })
           .catch(error => {
             setShow(false);
             console.error(error);
-            // Handle the error as needed
           });
     }
 
@@ -50,7 +48,6 @@ const MakeNote = ({Id,setNoteContent}) => {
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" id="passInput">
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="text"
               placeholder="pupu Password"
                value={password}
                onChange={handleChange}
