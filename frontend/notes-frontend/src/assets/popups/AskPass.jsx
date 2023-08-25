@@ -4,6 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
+const API_URL='http://localhost:8000';
+
+
+
 
 const AskPass = ({ Id, setNoteContent }) => {
   const [show, setShow] = useState(true);
@@ -21,7 +25,7 @@ const AskPass = ({ Id, setNoteContent }) => {
   const handlePassSubmit = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:8000/view-full?id=${Id}&password=${password}`)
+      .get(`${API_URL}/view-full?id=${Id}&password=${password}`)
       .then((response) => {
         const noteContent = response.data;
         if(noteContent==="WRONG PASSWORD")

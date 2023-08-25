@@ -6,6 +6,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button';
 
+const API_URL='http://localhost:8000';
+
 const View = () => {
   const id=useParams().id;
 
@@ -21,10 +23,9 @@ const View = () => {
       id: id,
       content: noteContent
     };
-    axios.post('http://localhost:8000/update', postData)
+    axios.post(API_URL+'/update', postData)
           .then(response => {
             setNoteContent(noteContent);
-            // Handle the response as needed
           })
           .catch(error => {
             console.error(error);
@@ -34,7 +35,7 @@ const View = () => {
 
   const checkNoteExistence = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/view-existence?id=${id}`);
+      const response = await axios.get(`${API_URL}/view-existence?id=${id}`);
       if (response.data === 'YES') {
         setNoteExists(true);
       } else {

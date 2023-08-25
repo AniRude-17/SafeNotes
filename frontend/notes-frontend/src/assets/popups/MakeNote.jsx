@@ -5,6 +5,8 @@ import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 
+const API_URL='http://localhost:8000';
+
 const MakeNote = ({Id,setNoteContent}) => {
 
     const [show, setShow] = useState(true);
@@ -25,7 +27,7 @@ const MakeNote = ({Id,setNoteContent}) => {
             passhash: password,
             content: " "
           };
-          axios.post('http://localhost:8000/add', postData)
+          axios.post(API_URL+'/add', postData)
           .then(response => {
             setShow(false);
             setNoteContent("The Note is Currently Empty :(");

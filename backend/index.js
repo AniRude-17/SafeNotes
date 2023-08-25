@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.listen(8000);
+app.listen(8000,'0.0.0.0');
 
 const KEY = "abcd1010abcd";
 
